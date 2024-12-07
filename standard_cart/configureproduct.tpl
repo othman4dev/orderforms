@@ -94,7 +94,7 @@ var _localLang = {
                                           </div>
                                       {/if}
                                     </div>
-                                    <select name="billingcycle" id="inputBillingcycle" style="display:none;" class="form-control select-inline custom-select" onchange="updateConfigurableOptions({$i}, this.value);changeBillingCycle(this.value); return false">
+                                    <select name="billingcycle" id="inputBillingcycle" style="display:none;" class="form-control select-inline custom-select" onchange="updateConfigurableOptions({$i}, this.value); return false">
                                         {if $pricing.monthly}
                                             <option value="monthly"{if $billingcycle eq "monthly"} id="monthly" selected{/if}>
                                                 {$pricing.monthly}
