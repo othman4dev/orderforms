@@ -70,7 +70,7 @@ var _localLang = {
                                               <h1 class="billing-title">Semiannually</h1>
                                               <p class="billing-price">€{$pricing.rawpricing.semiannually}</p>
                                               <div class="saving">
-                                                  <p class="saving-title">Save 5%</p>
+                                                  <p class="saving-title">Save 10%</p>
                                                   <span class="old-price">
                                                         €{$pricing.rawpricing.semiannually * 1.20}
                                                   </span>
@@ -82,7 +82,7 @@ var _localLang = {
                                               <h1 class="billing-title">Annually</h1>
                                               <p class="billing-price">€{$pricing.rawpricing.annually}</p>
                                               <div class="saving">
-                                                  <p class="saving-title">Save 5%</p>
+                                                  <p class="saving-title">Save 15%</p>
                                                   <span class="old-price">
                                                     €{$pricing.rawpricing.annually * 1.20}
                                                   </span>
