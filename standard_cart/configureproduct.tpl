@@ -44,8 +44,7 @@ var _localLang = {
                             <div class="field-container">
                                 <div class="form-group">
                                     <label for="inputBillingcycle" style="font-size:2em">{$LANG.cartchoosecycle}</label>
-                                    
-                                    <div class="newBillingCycle">
+                                    <div class="newBillingCycle" onclick="changeBillingCycle('monthly')">
                                       {if $pricing.monthly}
                                       <div class="billingcycle">
                                         <h1 class="billing-title">{$pricing.monthly|explode:' '|@index_2}</h1>
@@ -53,7 +52,7 @@ var _localLang = {
                                       </div>
                                       {/if}
                                       {if $pricing.quarterly}
-                                      <div class="billingcycle">
+                                      <div class="billingcycle" onclick="changeBillingCycle('quarterly')">
                                         <h1 class="billing-title">{$pricing.quarterly|explode:' '|@index_2}</h1>
                                         <p class="billing-price">{$pricing.quarterly|explode:' '|@index_0}</p>
                                         <div class="saving">
@@ -67,7 +66,7 @@ var _localLang = {
                                       </div>
                                       {/if}
                                       {if $pricing.semiannually}
-                                         <div class="billingcycle">
+                                         <div class="billingcycle" onclick="changeBillingCycle('semiannually')">
                                               <h1 class="billing-title">Semiannually</h1>
                                               <p class="billing-price">{$pricing.semiannually|explode:' '|@index_0}</p>
                                               <div class="saving">
@@ -81,7 +80,7 @@ var _localLang = {
                                           </div>
                                       {/if}
                                       {if $pricing.annually}
-                                          <div class="billingcycle active">
+                                          <div class="billingcycle" onclick="changeBillingCycle('annually')">
                                               <h1 class="billing-title">Annually</h1>
                                               <p class="billing-price">{$pricing.annually|explode:' '|@index_0}</p>
                                               <div class="saving">
