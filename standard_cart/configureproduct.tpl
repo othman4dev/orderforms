@@ -427,7 +427,7 @@ var _localLang = {
   color: #fff;
   padding: 15px;
   min-width: 220px;
-  min-height: 100px;
+  min-height: 120px;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -463,7 +463,7 @@ var _localLang = {
 
         function changeBillingCycle(choice) {
           let select = document.getElementById("inputBillingcycle");
-          select.document.querySelectorAll("option").forEach(function (el) {
+          select.querySelectorAll("option").forEach(function (el) {
             el.removeAttribute("selected");
           });
           select
