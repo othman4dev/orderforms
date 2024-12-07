@@ -402,7 +402,7 @@ var _localLang = {
 
 <style>
 .active {
-  border: solid 2.5px #1d24ca;
+  border-color: #1d24ca;
 }
 .saving {
   display: flex;
@@ -416,7 +416,9 @@ var _localLang = {
   gap: 10px;
 }
 .billingcycle {
-  border: solid 2.5px #141526;
+  border-style: solid;
+  border-width: 2.5px;
+  border-color: #141526;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
