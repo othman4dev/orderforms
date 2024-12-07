@@ -45,7 +45,7 @@ var _localLang = {
                         {if $pricing.type eq "recurring"}
                             <div class="field-container">
                                 <div class="form-group">
-                                    <label for="inputBillingcycle" style="font-size:2em">{$LANG.cartchoosecycle}</label>
+                                    <label for="inputBillingcycle" style="font-size:1.4em">{$LANG.cartchoosecycle}</label>
                                     <div class="newBillingCycle">
                                       {if $pricing.monthly}
                                       <div class="billingcycle" onclick="changeBillingCycle('monthly',this)">
@@ -402,8 +402,7 @@ var _localLang = {
 
 <style>
 .active {
-  border: solid 2px #1d24ca;
-  scale: 1.02;
+  border: solid 2.5px #1d24ca;
 }
 .saving {
   display: flex;
@@ -417,6 +416,7 @@ var _localLang = {
   gap: 10px;
 }
 .billingcycle {
+    border: solid 2.5px #0000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
