@@ -458,6 +458,35 @@ var _localLang = {
   border-color: #1d24ca;
 }
 
+#order-standard_cart .summary-container {
+  margin: 0;
+  padding: 10px;
+  min-height: 100px;
+  background-color: #141526;
+  color: #fff;
+  font-size: 0.8em;
+}
+
+#order-standard_cart .order-summary .product-name {
+  display: block;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #fff;
+}
+#order-standard_cart .order-summary .product-group {
+  margin: 0 0 5px 0;
+  display: block;
+  font-style: italic;
+  font-size: 1.4em;
+}
+#order-standard_cart .order-summary .summary-totals {
+  margin: 5px 0;
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.3em;
+}
+
 </style>
 
 <script>
