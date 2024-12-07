@@ -32,9 +32,9 @@ var _localLang = {
 
                         <p>{$LANG.orderForm.configureDesiredOptions}</p>
 
-                        <div class="product-info">
-                            <p class="product-title">{$productinfo.name}</p>
-                            <p>{$productinfo.description}</p>
+                        <div class="product-info" style="background-color:#141526;">
+                            <p class="product-title" style="color:#fff">{$productinfo.name}</p>
+                            <p style="color:#fff">{$productinfo.description}</p>
                         </div>
 
                         <div class="alert alert-danger w-hidden" role="alert" id="containerProductValidationErrors">
@@ -92,22 +92,22 @@ var _localLang = {
                                     </div>
                                     <select name="billingcycle" id="inputBillingcycle" style="display:none;" class="form-control select-inline custom-select" onchange="updateConfigurableOptions({$i}, this.value); return false">
                                         {if $pricing.monthly}
-                                            <option value="monthly"{if $billingcycle eq "monthly"} id="monthly" selected{/if}>
+                                            <option value="monthly"{if $billingcycle eq "monthly"} selected{/if}>
                                                 {$pricing.monthly}
                                             </option>
                                         {/if}
                                         {if $pricing.quarterly}
-                                            <option value="quarterly"{if $billingcycle eq "quarterly"} id="quarterly" selected{/if}>
+                                            <option value="quarterly"{if $billingcycle eq "quarterly"} selected{/if}>
                                                 {$pricing.quarterly}
                                             </option>
                                         {/if}
                                         {if $pricing.semiannually}
-                                            <option value="semiannually"{if $billingcycle eq "semiannually"} id="semiannually" selected{/if}>
+                                            <option value="semiannually"{if $billingcycle eq "semiannually"} selected{/if}>
                                                 {$pricing.semiannually}
                                             </option>
                                         {/if}
                                         {if $pricing.annually}
-                                            <option value="annually"{if $billingcycle eq "annually"} id="annually" selected{/if}>
+                                            <option value="annually"{if $billingcycle eq "annually"} selected{/if}>
                                                 {$pricing.annually}
                                             </option>
                                         {/if}
