@@ -452,7 +452,7 @@ var _localLang = {
   color: #787878;
   font-size: 13px;
 }
-.active {
+.active- {
   border-color: #1d24ca;
 }
 #order-standard_cart .order-summary h2 {
@@ -515,18 +515,19 @@ var _localLang = {
           select
             .querySelector('option[value="' + choice + '"]')
             .setAttribute("selected", "selected");
-          document.querySelectorAll(".active").forEach(function (el) {
-            el.classList.remove("active");
+          document.querySelectorAll(".active-").forEach(function (el) {
+            el.classList.remove("active-");
           });
           if (choice == "monthly") {
-            el.classList.add("active");
+            el.classList.add("active-");
           } else if (choice == "quarterly") {
-            el.classList.add("active");
+            el.classList.add("active-");
           } else if (choice == "semiannually") {
-            el.classList.add("active");
+            el.classList.add("active-");
           } else {
-            el.classList.add("active");
+            el.classList.add("active-");
           }
+          updateConfigurableOptions({$i}, this.value);
         }
 
 </script>
