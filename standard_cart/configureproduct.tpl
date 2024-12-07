@@ -58,7 +58,7 @@ var _localLang = {
                                         <div class="saving">
                                           <p class="saving-title">Save 5%</p>
                                           <span class="old-price">
-                                            {$pricing}
+                                            {$pricing.price}
                                           </span>
                                         </div>
                                       </div>
