@@ -1,5 +1,7 @@
 {include file="orderforms/standard_cart/common.tpl"}
 
+{debug}
+
 <script>
 var _localLang = {
     'addToCart': '{$LANG.orderForm.addToCart|escape}',
@@ -457,14 +459,5 @@ var _localLang = {
 
 </style>
 
-<script>
-
-console.log({$pricing, 
-{php}
-    print_r($this->_tpl_vars['pricing']);
-{/php}
-});
-
-</script>
 
 {include file="orderforms/standard_cart/recommendations-modal.tpl"}
