@@ -401,9 +401,6 @@ var _localLang = {
 <script>recalctotals();</script>
 
 <style>
-.active {
-  border-color: #1d24ca;
-}
 .saving {
   display: flex;
   align-items: center;
@@ -457,7 +454,9 @@ var _localLang = {
   color: #787878;
   font-size: 13px;
 }
-
+.active {
+  border-color: #1d24ca;
+}
 
 </style>
 
