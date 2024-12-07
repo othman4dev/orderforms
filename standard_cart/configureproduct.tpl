@@ -364,15 +364,12 @@ var _localLang = {
                                 </div>
                             </div>
                         {/if}
-
                         <div class="alert alert-warning info-text-sm">
                             <i class="fas fa-question-circle"></i>
                             {$LANG.orderForm.haveQuestionsContact} <a href="{$WEB_ROOT}/contact.php" target="_blank" class="alert-link">{$LANG.orderForm.haveQuestionsClickHere}</a>
                         </div>
-
                     </div>
                     <div class="secondary-cart-sidebar" id="scrollingPanelContainer">
-
                         <div id="orderSummary">
                             <div class="order-summary">
                                 <div class="loader" id="orderSummaryLoader">
@@ -448,6 +445,7 @@ var _localLang = {
   border-radius: 100px;
   font-size: 13px;
   margin-top: 2px;
+  color:#fff;
 }
 .old-price {
   text-decoration: line-through;
@@ -496,6 +494,11 @@ var _localLang = {
 }
 #btnCompleteProductConfig {
     background-color: #1D24CA;
+}
+
+#order-standard_cart .product-info .product-title {
+  margin: 0;
+  font-size: 1.8em;
 }
 
 </style>
