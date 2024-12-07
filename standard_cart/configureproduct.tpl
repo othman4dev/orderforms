@@ -46,7 +46,7 @@ var _localLang = {
                             <div class="field-container">
                                 <div class="form-group">
                                     <label for="inputBillingcycle" style="font-size:2em">{$LANG.cartchoosecycle}</label>
-                                    <div class="newBillingCycle" onclick="changeBillingCycle('monthly')">
+                                    <div class="newBillingCycle" onclick="changeBillingCycle('monthly',this)">
                                       {if $pricing.monthly}
                                       <div class="billingcycle">
                                         <h1 class="billing-title">Monthly</h1>
@@ -54,7 +54,7 @@ var _localLang = {
                                       </div>
                                       {/if}
                                       {if $pricing.quarterly}
-                                      <div class="billingcycle" onclick="changeBillingCycle('quarterly')">
+                                      <div class="billingcycle" onclick="changeBillingCycle('quarterly',this)">
                                         <h1 class="billing-title">Quarterly</h1>
                                         <p class="billing-price">€{$pricing.rawpricing.quarterly}</p>
                                         <div class="saving">
@@ -66,7 +66,7 @@ var _localLang = {
                                       </div>
                                       {/if}
                                       {if $pricing.semiannually}
-                                         <div class="billingcycle" onclick="changeBillingCycle('semiannually')">
+                                         <div class="billingcycle" onclick="changeBillingCycle('semiannually',this)">
                                               <h1 class="billing-title">Semiannually</h1>
                                               <p class="billing-price">€{$pricing.rawpricing.semiannually}</p>
                                               <div class="saving">
@@ -78,7 +78,7 @@ var _localLang = {
                                           </div>
                                       {/if}
                                       {if $pricing.annually}
-                                          <div class="billingcycle" onclick="changeBillingCycle('annually')">
+                                          <div class="billingcycle" onclick="changeBillingCycle('annually',this)">
                                               <h1 class="billing-title">Annually</h1>
                                               <p class="billing-price">€{$pricing.rawpricing.annually}</p>
                                               <div class="saving">
@@ -461,8 +461,10 @@ var _localLang = {
 
 <script>
 
-        function changeBillingCycle(choice) {
+        function changeBillingCycle(choice,el) {
+            console.log(choice);
           let select = document.getElementById("inputBillingcycle");
+          console.log(select);
           select.querySelectorAll("option").forEach(function (el) {
             el.removeAttribute("selected");
           });
@@ -473,13 +475,13 @@ var _localLang = {
             el.classList.remove("active");
           });
           if (choice == "monthly") {
-            document.getElementById("monthly").classList.add("active");
+            el.classList.add("active");
           } else if (choice == "quarterly") {
-            document.getElementById("quarterly").classList.add("active");
+            el.classList.add("active");
           } else if (choice == "semiannually") {
-            document.getElementById("semiannually").classList.add("active");
+            el.classList.add("active");
           } else {
-            document.getElementById("annually").classList.add("active");
+            el.classList.add("active");
           }
         }
 
