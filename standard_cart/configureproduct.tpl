@@ -50,17 +50,17 @@ var _localLang = {
                                       {if $pricing.monthly}
                                       <div class="billingcycle">
                                         <h1 class="billing-title">Monthly</h1>
-                                        <p class="billing-price">{$pricing.rawpricing.monthly}</p>
+                                        <p class="billing-price">€{$pricing.rawpricing.monthly}</p>
                                       </div>
                                       {/if}
                                       {if $pricing.quarterly}
                                       <div class="billingcycle" onclick="changeBillingCycle('quarterly')">
                                         <h1 class="billing-title">Quarterly</h1>
-                                        <p class="billing-price">{$pricing.rawpricing.quarterly}</p>
+                                        <p class="billing-price">€{$pricing.rawpricing.quarterly}</p>
                                         <div class="saving">
                                           <p class="saving-title">Save 5%</p>
                                           <span class="old-price">
-                                            {$pricing.rawpricing.monthly * 1.20}
+                                            €{$pricing.rawpricing.quarterly * 1.20}
                                           </span>
                                         </div>
                                       </div>
@@ -68,11 +68,11 @@ var _localLang = {
                                       {if $pricing.semiannually}
                                          <div class="billingcycle" onclick="changeBillingCycle('semiannually')">
                                               <h1 class="billing-title">Semiannually</h1>
-                                              <p class="billing-price">{$pricing.rawpricing.semiannually}</p>
+                                              <p class="billing-price">€{$pricing.rawpricing.semiannually}</p>
                                               <div class="saving">
                                                   <p class="saving-title">Save 5%</p>
                                                   <span class="old-price">
-                                                        {$pricing.rawpricing.semiannually * 1.20}
+                                                        €{$pricing.rawpricing.semiannually * 1.20}
                                                   </span>
                                               </div>
                                           </div>
@@ -80,11 +80,11 @@ var _localLang = {
                                       {if $pricing.annually}
                                           <div class="billingcycle" onclick="changeBillingCycle('annually')">
                                               <h1 class="billing-title">Annually</h1>
-                                              <p class="billing-price">{$pricing.rawpricing.annually}</p>
+                                              <p class="billing-price">€{$pricing.rawpricing.annually}</p>
                                               <div class="saving">
                                                   <p class="saving-title">Save 5%</p>
                                                   <span class="old-price">
-                                                    {$pricing.rawpricing.annually * 1.20}
+                                                    €{$pricing.rawpricing.annually * 1.20}
                                                   </span>
                                               </div>
                                           </div>
@@ -458,6 +458,32 @@ var _localLang = {
 
 
 </style>
+
+<script>
+
+        function changeBillingCycle(choice) {
+          let select = document.getElementById("inputBillingcycle");
+          select.document.querySelectorAll("option").forEach(function (el) {
+            el.removeAttribute("selected");
+          });
+          select
+            .querySelector('option[value="' + choice + '"]')
+            .setAttribute("selected", "selected");
+          document.querySelectorAll(".active").forEach(function (el) {
+            el.classList.remove("active");
+          });
+          if (choice == "monthly") {
+            document.getElementById("monthly").classList.add("active");
+          } else if (choice == "quarterly") {
+            document.getElementById("quarterly").classList.add("active");
+          } else if (choice == "semiannually") {
+            document.getElementById("semiannually").classList.add("active");
+          } else {
+            document.getElementById("annually").classList.add("active");
+          }
+        }
+
+</script>
 
 
 {include file="orderforms/standard_cart/recommendations-modal.tpl"}

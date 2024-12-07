@@ -183,28 +183,6 @@
           });
         }
 
-        function changeBillingCycle(choice) {
-          let select = document.getElementById("inputBillingcycle");
-          select.document.querySelectorAll("option").forEach(function (el) {
-            el.removeAttribute("selected");
-          });
-          select
-            .querySelector('option[value="' + choice + '"]')
-            .setAttribute("selected", "selected");
-          document.querySelectorAll(".active").forEach(function (el) {
-            el.classList.remove("active");
-          });
-          if (choice == "monthly") {
-            document.getElementById("monthly").classList.add("active");
-          } else if (choice == "quarterly") {
-            document.getElementById("quarterly").classList.add("active");
-          } else if (choice == "semiannually") {
-            document.getElementById("semiannually").classList.add("active");
-          } else {
-            document.getElementById("annually").classList.add("active");
-          }
-        }
-
         // Wrap input
         parent = self
           .wrap(parent + "/>")
