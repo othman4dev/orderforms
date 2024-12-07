@@ -527,7 +527,7 @@ var _localLang = {
           } else {
             el.classList.add("active-");
           }
-          updateConfigurableOptions({$i}, this.value);
+          updateConfigurableOptions(0, select.querySelector('option[value="' + choice + '"]').value);
         }
 
 </script>
