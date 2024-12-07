@@ -43,26 +43,76 @@ var _localLang = {
                         {if $pricing.type eq "recurring"}
                             <div class="field-container">
                                 <div class="form-group">
-                                    <label for="inputBillingcycle">{$LANG.cartchoosecycle}</label>
-                                    <br>
-                                    <select name="billingcycle" id="inputBillingcycle" class="form-control select-inline custom-select" onchange="updateConfigurableOptions({$i}, this.value); return false">
+                                    <label for="inputBillingcycle" style="font-size:2em">{$LANG.cartchoosecycle}</label>
+                                    
+                                    <div class="newBillingCycle">
+                                      {if $pricing.monthly}
+                                      <div class="billingcycle">
+                                        <h1 class="billing-title">{$pricing.monthly|explode:' '|@index_2}</h1>
+                                        <p class="billing-price">{$pricing.monthly|explode:' '|@index_0}</p>
+                                      </div>
+                                      {/if}
+                                      {if $pricing.quarterly}
+                                      <div class="billingcycle">
+                                        <h1 class="billing-title">{$pricing.quarterly|explode:' '|@index_2}</h1>
+                                        <p class="billing-price">{$pricing.quarterly|explode:' '|@index_0}</p>
+                                        <div class="saving">
+                                          <p class="saving-title">Save 5%</p>
+                                          <span class="old-price">
+                                            {$oldPrice = $pricing.quarterly|explode:' '|@index_0}
+                                            {$oldPrice = $oldPrice * 1.05}
+                                            {$oldPrice}
+                                          </span>
+                                        </div>
+                                      </div>
+                                      {/if}
+                                      {if $pricing.semiannually}
+                                         <div class="billingcycle">
+                                              <h1 class="billing-title">Semiannually</h1>
+                                              <p class="billing-price">{$pricing.semiannually|explode:' '|@index_0}</p>
+                                              <div class="saving">
+                                                  <p class="saving-title">Save 5%</p>
+                                                  <span class="old-price">
+                                                      {$oldPrice = $pricing.semiannually|explode:' '|@index_0}
+                                                      {$oldPrice = $oldPrice * 1.05}
+                                                      {$oldPrice}
+                                                  </span>
+                                              </div>
+                                          </div>
+                                      {/if}
+                                      {if $pricing.annually}
+                                          <div class="billingcycle active">
+                                              <h1 class="billing-title">Annually</h1>
+                                              <p class="billing-price">{$pricing.annually|explode:' '|@index_0}</p>
+                                              <div class="saving">
+                                                  <p class="saving-title">Save 20%</p>
+                                                  <span class="old-price">
+                                                      {$oldPrice = $pricing.annually|explode:' '|@index_0}
+                                                      {$oldPrice = $oldPrice * 1.20}
+                                                      {$oldPrice}
+                                                  </span>
+                                              </div>
+                                          </div>
+                                      {/if}
+                                    </div>
+                                    <select name="billingcycle" id="inputBillingcycle" style="display:none;" class="form-control select-inline custom-select" onchange="updateConfigurableOptions({$i}, this.value);changeBillingCycle(this.value); return false">
                                         {if $pricing.monthly}
-                                            <option value="monthly"{if $billingcycle eq "monthly"} selected{/if}>
+                                            <option value="monthly"{if $billingcycle eq "monthly"} id="monthly" selected{/if}>
                                                 {$pricing.monthly}
                                             </option>
                                         {/if}
                                         {if $pricing.quarterly}
-                                            <option value="quarterly"{if $billingcycle eq "quarterly"} selected{/if}>
+                                            <option value="quarterly"{if $billingcycle eq "quarterly"} id="quarterly" selected{/if}>
                                                 {$pricing.quarterly}
                                             </option>
                                         {/if}
                                         {if $pricing.semiannually}
-                                            <option value="semiannually"{if $billingcycle eq "semiannually"} selected{/if}>
+                                            <option value="semiannually"{if $billingcycle eq "semiannually"} id="semiannually" selected{/if}>
                                                 {$pricing.semiannually}
                                             </option>
                                         {/if}
                                         {if $pricing.annually}
-                                            <option value="annually"{if $billingcycle eq "annually"} selected{/if}>
+                                            <option value="annually"{if $billingcycle eq "annually"} id="annually" selected{/if}>
                                                 {$pricing.annually}
                                             </option>
                                         {/if}
