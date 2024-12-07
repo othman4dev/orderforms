@@ -46,9 +46,9 @@ var _localLang = {
                             <div class="field-container">
                                 <div class="form-group">
                                     <label for="inputBillingcycle" style="font-size:2em">{$LANG.cartchoosecycle}</label>
-                                    <div class="newBillingCycle" onclick="changeBillingCycle('monthly',this)">
+                                    <div class="newBillingCycle">
                                       {if $pricing.monthly}
-                                      <div class="billingcycle">
+                                      <div class="billingcycle" onclick="changeBillingCycle('monthly',this)">
                                         <h1 class="billing-title">Monthly</h1>
                                         <p class="billing-price">€{$pricing.rawpricing.monthly}</p>
                                       </div>
