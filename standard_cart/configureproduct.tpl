@@ -46,21 +46,19 @@ var _localLang = {
                                     <label for="inputBillingcycle" style="font-size:2em">{$LANG.cartchoosecycle}</label>
                                     <div class="newBillingCycle" onclick="changeBillingCycle('monthly')">
                                       {if $pricing.monthly}
-                                      <div class="billingcycle">
-                                        <h1 class="billing-title">{$pricing.monthly|explode:' '|@index_2}</h1>
-                                        <p class="billing-price">{$pricing.monthly|explode:' '|@index_0}</p>
+                                      <div class="billingcycle">1
+                                        <h1 class="billing-title">{$pricing.monthly}</h1>
+                                        <p class="billing-price">{$pricing.monthly}</p>
                                       </div>
                                       {/if}
                                       {if $pricing.quarterly}
                                       <div class="billingcycle" onclick="changeBillingCycle('quarterly')">
-                                        <h1 class="billing-title">{$pricing.quarterly|explode:' '|@index_2}</h1>
-                                        <p class="billing-price">{$pricing.quarterly|explode:' '|@index_0}</p>
+                                        <h1 class="billing-title">{$pricing.quarterly}</h1>
+                                        <p class="billing-price">{$pricing.quarterly}</p>
                                         <div class="saving">
                                           <p class="saving-title">Save 5%</p>
                                           <span class="old-price">
-                                            {$oldPrice = $pricing.quarterly|explode:' '|@index_0}
-                                            {$oldPrice = $oldPrice * 1.05}
-                                            {$oldPrice}
+                                            {$pricing}
                                           </span>
                                         </div>
                                       </div>
@@ -68,13 +66,11 @@ var _localLang = {
                                       {if $pricing.semiannually}
                                          <div class="billingcycle" onclick="changeBillingCycle('semiannually')">
                                               <h1 class="billing-title">Semiannually</h1>
-                                              <p class="billing-price">{$pricing.semiannually|explode:' '|@index_0}</p>
+                                              <p class="billing-price">{$pricing.semiannually}</p>
                                               <div class="saving">
                                                   <p class="saving-title">Save 5%</p>
                                                   <span class="old-price">
-                                                      {$oldPrice = $pricing.semiannually|explode:' '|@index_0}
-                                                      {$oldPrice = $oldPrice * 1.05}
-                                                      {$oldPrice}
+                                                      {$pricing}
                                                   </span>
                                               </div>
                                           </div>
@@ -82,13 +78,11 @@ var _localLang = {
                                       {if $pricing.annually}
                                           <div class="billingcycle" onclick="changeBillingCycle('annually')">
                                               <h1 class="billing-title">Annually</h1>
-                                              <p class="billing-price">{$pricing.annually|explode:' '|@index_0}</p>
+                                              <p class="billing-price">{$pricing.annually}</p>
                                               <div class="saving">
                                                   <p class="saving-title">Save 20%</p>
                                                   <span class="old-price">
-                                                      {$oldPrice = $pricing.annually|explode:' '|@index_0}
-                                                      {$oldPrice = $oldPrice * 1.20}
-                                                      {$oldPrice}
+                                                      {$pricing}
                                                   </span>
                                               </div>
                                           </div>
