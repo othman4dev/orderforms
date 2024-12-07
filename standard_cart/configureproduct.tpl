@@ -46,7 +46,7 @@ var _localLang = {
                                     <label for="inputBillingcycle" style="font-size:2em">{$LANG.cartchoosecycle}</label>
                                     <div class="newBillingCycle" onclick="changeBillingCycle('monthly')">
                                       {if $pricing.monthly}
-                                      <div class="billingcycle">1
+                                      <div class="billingcycle">
                                         <h1 class="billing-title">{$pricing.monthly}</h1>
                                         <p class="billing-price">{$pricing.monthly}</p>
                                       </div>
@@ -456,5 +456,15 @@ var _localLang = {
 
 
 </style>
+
+<script>
+
+console.log({$pricing, 
+{php}
+    print_r($this->_tpl_vars['pricing']);
+{/php}
+});
+
+</script>
 
 {include file="orderforms/standard_cart/recommendations-modal.tpl"}
