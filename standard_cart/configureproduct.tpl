@@ -457,7 +457,15 @@ var _localLang = {
 .active {
   border-color: #1d24ca;
 }
-
+#order-standard_cart .order-summary h2 {
+  padding: 12px 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #1D24CA;
+  margin: 0;
+}
 #order-standard_cart .summary-container {
   margin: 0;
   padding: 10px;
@@ -485,6 +493,9 @@ var _localLang = {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   font-size: 1.3em;
+}
+#btnCompleteProductConfig {
+    background-color: #1D24CA;
 }
 
 </style>
