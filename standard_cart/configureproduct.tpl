@@ -1,7 +1,5 @@
 {include file="orderforms/standard_cart/common.tpl"}
 
-{debug}
-
 <script>
 var _localLang = {
     'addToCart': '{$LANG.orderForm.addToCart|escape}',
@@ -33,8 +31,8 @@ var _localLang = {
                         <p>{$LANG.orderForm.configureDesiredOptions}</p>
 
                         <div class="product-info" style="background-color:#141526;">
-                            <p class="product-title" style="color:#fff">{$productinfo.name}</p>
-                            <p style="color:#fff">{$productinfo.description}</p>
+                            <p class="product-title" style="color:#fff;margin-bottom:7px">{$productinfo.name}</p>
+                            <p style="color:#fff;margin:0;">{$productinfo.description}</p>
                         </div>
 
                         <div class="alert alert-danger w-hidden" role="alert" id="containerProductValidationErrors">
