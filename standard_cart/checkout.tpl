@@ -61,7 +61,7 @@
                     <div id="containerExistingAccountSelect" class="row account-select-container">
                         {foreach $accounts as $account}
                             <div class="col-sm-{if $accounts->count() == 1}12{else}6{/if}">
-                                <div class="account{if $selectedAccountId == $account->id} active{/if}">
+                                <div class="account{if $selectedAccountId == $account->id} active{/if}" style="background: #0b0c1b;">
                                     <label class="radio-inline" for="account{$account->id}">
                                         <input id="account{$account->id}" class="account-select{if $account->isClosed || $account->noPermission || $inExpressCheckout} disabled{/if}" type="radio" name="account_id" value="{$account->id}"{if $account->isClosed || $account->noPermission || $inExpressCheckout} disabled="disabled"{/if}{if $selectedAccountId == $account->id} checked="checked"{/if}>
                                         <span class="address">
@@ -95,7 +95,7 @@
                             </div>
                         {/foreach}
                         <div class="col-sm-12">
-                            <div class="account border-bottom{if !$selectedAccountId || !is_numeric($selectedAccountId)} active{/if}">
+                            <div class="account border-bottom{if !$selectedAccountId || !is_numeric($selectedAccountId)} active{/if}" style="background: #0b0c1b;">
                                 <label class="radio-inline">
                                     <input class="account-select" type="radio" name="account_id" value="new"{if !$selectedAccountId || !is_numeric($selectedAccountId)} checked="checked"{/if}{if $inExpressCheckout} disabled="disabled" class="disabled"{/if}>
                                     {lang key='orderForm.createAccount'}
