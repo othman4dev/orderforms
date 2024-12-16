@@ -171,10 +171,6 @@
                         </div>
                     </div>
 
-                    <div class="sub-heading">
-                        <span class="primary-bg-color">{$LANG.orderForm.billingAddress}</span>
-                    </div>
-
                     {if $customfields}
                         <div class="sub-heading">
                             <span class="primary-bg-color">{$LANG.orderadditionalrequiredinfo}<br><i><small>{lang key='orderForm.requiredField'}</small></i></span>
