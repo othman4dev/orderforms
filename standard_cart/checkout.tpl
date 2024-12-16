@@ -13,7 +13,7 @@
     window.langPasswordModerate = "{$LANG.pwstrengthmoderate}";
     window.langPasswordStrong = "{$LANG.pwstrengthstrong}";
 </script>
-<div id="order-standard_cart">
+<div id="order-standard_cart" >
 
     <div class="row">
         <div class="cart-sidebar">

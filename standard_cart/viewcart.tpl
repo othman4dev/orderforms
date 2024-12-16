@@ -82,7 +82,7 @@
                             <div class="view-cart-items">
 
                                 {foreach $products as $num => $product}
-                                    <div class="item">
+                                    <div class="item" style="background-color:#0b0c1b !important;">
                                         <div class="row">
                                             <div class="{if $showqtyoptions}col-sm-5{else}col-sm-7{/if}">
                                                 <span class="item-title">
