@@ -163,110 +163,16 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group prepend-icon">
-                                <label for="inputLastName" class="field-icon">
-                                    <i class="fas fa-user"></i>
-                                </label>
-                                <input type="text" name="lastname" id="inputLastName" class="field form-control" placeholder="{$LANG.orderForm.lastName}" value="{$clientsdetails.lastname}">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group prepend-icon">
                                 <label for="inputEmail" class="field-icon">
                                     <i class="fas fa-envelope"></i>
                                 </label>
                                 <input type="email" name="email" id="inputEmail" class="field form-control" placeholder="{$LANG.orderForm.emailAddress}" value="{$clientsdetails.email}">
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group prepend-icon">
-                                <label for="inputPhone" class="field-icon">
-                                    <i class="fas fa-phone"></i>
-                                </label>
-                                <input type="tel" name="phonenumber" id="inputPhone" class="field form-control" placeholder="{$LANG.orderForm.phoneNumber}" value="{$clientsdetails.phonenumber}">
-                            </div>
-                        </div>
                     </div>
 
                     <div class="sub-heading">
                         <span class="primary-bg-color">{$LANG.orderForm.billingAddress}</span>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group prepend-icon">
-                                <label for="inputCompanyName" class="field-icon">
-                                    <i class="fas fa-building"></i>
-                                </label>
-                                <input type="text" name="companyname" id="inputCompanyName" class="field form-control" placeholder="{$LANG.orderForm.companyName} ({$LANG.orderForm.optional})" value="{$clientsdetails.companyname}">
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group prepend-icon">
-                                <label for="inputAddress1" class="field-icon">
-                                    <i class="far fa-building"></i>
-                                </label>
-                                <input type="text" name="address1" id="inputAddress1" class="field form-control" placeholder="{$LANG.orderForm.streetAddress}" value="{$clientsdetails.address1}">
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group prepend-icon">
-                                <label for="inputAddress2" class="field-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </label>
-                                <input type="text" name="address2" id="inputAddress2" class="field form-control" placeholder="{$LANG.orderForm.streetAddress2}" value="{$clientsdetails.address2}">
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group prepend-icon">
-                                <label for="inputCity" class="field-icon">
-                                    <i class="far fa-building"></i>
-                                </label>
-                                <input type="text" name="city" id="inputCity" class="field form-control" placeholder="{$LANG.orderForm.city}" value="{$clientsdetails.city}">
-                            </div>
-                        </div>
-                        <div class="col-sm-5">
-                            <div class="form-group prepend-icon">
-                                <label for="state" class="field-icon" id="inputStateIcon">
-                                    <i class="fas fa-map-signs"></i>
-                                </label>
-                                <label for="stateinput" class="field-icon" id="inputStateIcon">
-                                    <i class="fas fa-map-signs"></i>
-                                </label>
-                                <input type="text" name="state" id="inputState" class="field form-control" placeholder="{$LANG.orderForm.state}" value="{$clientsdetails.state}">
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="form-group prepend-icon">
-                                <label for="inputPostcode" class="field-icon">
-                                    <i class="fas fa-certificate"></i>
-                                </label>
-                                <input type="text" name="postcode" id="inputPostcode" class="field form-control" placeholder="{$LANG.orderForm.postcode}" value="{$clientsdetails.postcode}">
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group prepend-icon">
-                                <label for="inputCountry" class="field-icon" id="inputCountryIcon">
-                                    <i class="fas fa-globe"></i>
-                                </label>
-                                <select name="country" id="inputCountry" class="field form-control">
-                                    {foreach $countries as $countrycode => $countrylabel}
-                                        <option value="{$countrycode}"{if (!$country && $countrycode == $defaultcountry) || $countrycode eq $country} selected{/if}>
-                                            {$countrylabel}
-                                        </option>
-                                    {/foreach}
-                                </select>
-                            </div>
-                        </div>
-                        {if $showTaxIdField}
-                            <div class="col-sm-12">
-                                <div class="form-group prepend-icon">
-                                    <label for="inputTaxId" class="field-icon">
-                                        <i class="fas fa-building"></i>
-                                    </label>
-                                    <input type="text" name="tax_id" id="inputTaxId" class="field form-control" placeholder="{$taxLabel} ({$LANG.orderForm.optional})" value="{$clientsdetails.tax_id}">
-                                </div>
-                            </div>
-                        {/if}
                     </div>
 
                     {if $customfields}
