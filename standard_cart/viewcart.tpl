@@ -415,7 +415,7 @@
                                     </li>
                                 {/if}
                             </ul>
-                            <div class="tab-content">
+                            <div class="tab-content" style="background-color:#0b0c1b !important;">
                                 <div role="tabpanel" class="tab-pane active promo" id="applyPromo">
                                     {if $promotioncode}
                                         <div class="view-cart-promotion-code">
