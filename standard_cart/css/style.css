@@ -672,6 +672,7 @@
   margin: 0;
   padding: 10px;
   border-left: 0;
+  background-color: #0b0c1b !important;
   border-right: 0;
   font-size: 0.8em;
 }
