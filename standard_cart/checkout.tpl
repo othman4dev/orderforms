@@ -172,7 +172,7 @@
                     </div>
 
                     
-                    <div class="sub-heading">
+                    <div class="sub-heading" style="display: none;">
                         <span class="primary-bg-color">{$LANG.orderForm.billingAddress}</span>
                     </div>
 
